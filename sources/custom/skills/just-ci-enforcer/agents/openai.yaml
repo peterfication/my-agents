@@ -1,0 +1,4 @@
+interface:
+  display_name: "Just CI Enforcer"
+  short_description: "Require just ci to pass after implementation"
+  default_prompt: "Use $just-ci-enforcer to require `just ci` to succeed after implementation when the current repository supports it."
