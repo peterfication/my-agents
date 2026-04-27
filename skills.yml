@@ -9,7 +9,7 @@ skills:
   - path: sources/obra-superpowers/skills/subagent-driven-development
   - path: sources/obra-superpowers/skills/systematic-debugging
   - path: sources/obra-superpowers/skills/test-driven-development
-  - path: sources/obra-superpowers/skills/using-git-worktrees
+  # - path: sources/obra-superpowers/skills/using-git-worktrees
   - path: sources/obra-superpowers/skills/using-superpowers
   - path: sources/obra-superpowers/skills/verification-before-completion
   - path: sources/obra-superpowers/skills/writing-plans
