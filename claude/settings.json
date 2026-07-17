@@ -1,44 +1,5 @@
 {
-  "language": "english",
-  "verbose": true,
   "model": "opusplan",
-  "enabledPlugins": {
-    "pyright-lsp@claude-plugins-official": true,
-    "prenode-core@prenode": true,
-    "prenode-dev@prenode": true
-  },
-  "extraKnownMarketplaces": {
-    "prenode": {
-      "source": {
-        "source": "github",
-        "repo": "prenode/claude-skills"
-      }
-    },
-    "pulumi-agent-skills": {
-      "source": {
-        "source": "github",
-        "repo": "pulumi/agent-skills"
-      }
-    },
-    "azure-skills": {
-      "source": {
-        "source": "github",
-        "repo": "microsoft/azure-skills"
-      }
-    }
-  },
-  "bash": {
-    "deniedCommands": [
-      "rm -rf",
-      "git push --force",
-      "sudo",
-      "DROP TABLE",
-      "truncate"
-    ],
-    "allowedCommands": [
-      "just *"
-    ]
-  },
   "hooks": {
     "UserPromptSubmit": [
       {
@@ -108,6 +69,45 @@
           }
         ]
       }
+    ]
+  },
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true,
+    "prenode-core@prenode": true,
+    "prenode-dev@prenode": true
+  },
+  "extraKnownMarketplaces": {
+    "prenode": {
+      "source": {
+        "source": "github",
+        "repo": "prenode/claude-skills"
+      }
+    },
+    "pulumi-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "pulumi/agent-skills"
+      }
+    },
+    "azure-skills": {
+      "source": {
+        "source": "github",
+        "repo": "microsoft/azure-skills"
+      }
+    }
+  },
+  "language": "english",
+  "verbose": true,
+  "bash": {
+    "deniedCommands": [
+      "rm -rf",
+      "git push --force",
+      "sudo",
+      "DROP TABLE",
+      "truncate"
+    ],
+    "allowedCommands": [
+      "just *"
     ]
   }
 }
