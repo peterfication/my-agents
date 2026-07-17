@@ -1,0 +1,113 @@
+{
+  "language": "english",
+  "verbose": true,
+  "model": "opusplan",
+  "enabledPlugins": {
+    "pyright-lsp@claude-plugins-official": true,
+    "prenode-core@prenode": true,
+    "prenode-dev@prenode": true
+  },
+  "extraKnownMarketplaces": {
+    "prenode": {
+      "source": {
+        "source": "github",
+        "repo": "prenode/claude-skills"
+      }
+    },
+    "pulumi-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "pulumi/agent-skills"
+      }
+    },
+    "azure-skills": {
+      "source": {
+        "source": "github",
+        "repo": "microsoft/azure-skills"
+      }
+    }
+  },
+  "bash": {
+    "deniedCommands": [
+      "rm -rf",
+      "git push --force",
+      "sudo",
+      "DROP TABLE",
+      "truncate"
+    ],
+    "allowedCommands": [
+      "just *"
+    ]
+  },
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME/.local/bin/tmux-tool-state\" running",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME/.local/bin/tmux-tool-state\" running",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME/.local/bin/tmux-tool-state\" requires-input",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME/.local/bin/tmux-tool-state\" requires-input",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME/.local/bin/tmux-tool-state\" running",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$HOME/.local/bin/tmux-tool-state\" finished",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
