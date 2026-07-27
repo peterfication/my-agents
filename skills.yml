@@ -1,5 +1,9 @@
 skills:
   - path: sources/custom/skills/just-ci-enforcer
+  # https://www.aihero.dev/skills-grill-me
+  - path: sources/mattpocock-skills/skills/productivity/grill-me
+  # https://www.aihero.dev/grill-with-docs
+  - path: sources/mattpocock-skills/skills/engineering/grill-with-docs
   # - path: sources/obra-superpowers/skills/brainstorming
   # - path: sources/obra-superpowers/skills/dispatching-parallel-agents
   # - path: sources/obra-superpowers/skills/executing-plans
