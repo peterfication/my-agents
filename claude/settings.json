@@ -120,5 +120,9 @@
     "allowedCommands": [
       "just *"
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.config/agents/claude/statusline-command.sh"
   }
 }
