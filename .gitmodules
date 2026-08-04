@@ -4,3 +4,6 @@
 [submodule "sources/mattpocock-skills"]
 	path = sources/mattpocock-skills
 	url = https://github.com/mattpocock/skills.git
+[submodule "sources/prenode-claude-skills-lab"]
+	path = sources/prenode-claude-skills-lab
+	url = git@github.com:prenode/claude-skills-lab.git
