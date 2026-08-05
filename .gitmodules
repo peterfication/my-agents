@@ -7,3 +7,6 @@
 [submodule "sources/prenode-claude-skills-lab"]
 	path = sources/prenode-claude-skills-lab
 	url = git@github.com:prenode/claude-skills-lab.git
+[submodule "sources/prenode-claude-skills"]
+	path = sources/prenode-claude-skills
+	url = git@github.com:prenode/claude-skills.git
