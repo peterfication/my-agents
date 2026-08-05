@@ -1,5 +1,5 @@
 skills:
-  - path: sources/custom/skills/just-ci-enforcer
+  # - path: sources/custom/skills/just-ci-enforcer
   # https://www.aihero.dev/skills-grill-me
   - path: sources/mattpocock-skills/skills/productivity/grill-me
   # https://www.aihero.dev/grill-with-docs
@@ -19,3 +19,4 @@ skills:
   # - path: sources/obra-superpowers/skills/writing-plans
   # - path: sources/obra-superpowers/skills/writing-skills
   - path: sources/prenode-claude-skills/plugins/prenode-dev/skills/ensure-repo-standard
+  - path: sources/prenode-claude-skills/plugins/prenode-dev/skills/enforce-just-ci
