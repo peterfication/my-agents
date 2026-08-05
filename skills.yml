@@ -18,3 +18,4 @@ skills:
   # - path: sources/obra-superpowers/skills/verification-before-completion
   # - path: sources/obra-superpowers/skills/writing-plans
   # - path: sources/obra-superpowers/skills/writing-skills
+  - path: sources/prenode-claude-skills/plugins/prenode-dev/skills/ensure-repo-standard
