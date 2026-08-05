@@ -82,6 +82,10 @@
       }
     ]
   },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.config/agents/claude/statusline-command.sh"
+  },
   "enabledPlugins": {
     "pyright-lsp@claude-plugins-official": true,
     "prenode-core@prenode": true,
@@ -120,9 +124,5 @@
     "allowedCommands": [
       "just *"
     ]
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "bash ~/.config/agents/claude/statusline-command.sh"
   }
 }
