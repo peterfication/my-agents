@@ -2,6 +2,7 @@ skills:
   # - path: sources/custom/skills/just-ci-enforcer
   # https://www.aihero.dev/skills-grill-me
   - path: sources/mattpocock-skills/skills/productivity/grill-me
+  - path: sources/mattpocock-skills/skills/productivity/handoff
   # https://www.aihero.dev/grill-with-docs
   - path: sources/mattpocock-skills/skills/engineering/grill-with-docs
   # - path: sources/obra-superpowers/skills/brainstorming
