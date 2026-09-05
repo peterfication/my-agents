@@ -17,6 +17,7 @@ set -euo pipefail
 # - `path` is required and must point to an existing directory.
 # - `name` is optional. If omitted, the link name defaults to `basename(path)`.
 # - Relative paths are resolved from the repository root.
+# - Symlink sources are stored relative to `skills/` so they remain portable across home directories.
 # - Duplicate final link names fail before any filesystem changes are made.
 # - Each run removes all existing symlinks in `skills/` before recreating the configured set.
 
@@ -39,7 +40,7 @@ mkdir -p -- "$skills_dir"
 
 declare -a link_names=()
 declare -a raw_paths=()
-declare -a target_paths=()
+declare -a link_sources=()
 declare -A seen_names=()
 
 while IFS= read -r -d '' link_name && IFS= read -r -d '' raw_path; do
@@ -120,7 +121,12 @@ for i in "${!link_names[@]}"; do
     fail "Cannot replace non-symlink path: $destination"
   fi
 
-  target_paths+=("$resolved_path")
+  link_source=$(
+    ruby -r pathname -e \
+      'print Pathname.new(ARGV.fetch(0)).relative_path_from(Pathname.new(ARGV.fetch(1)))' \
+      "$resolved_path" "$skills_dir"
+  )
+  link_sources+=("$link_source")
 done
 
 for existing_path in "$skills_dir"/*; do
@@ -132,6 +138,6 @@ done
 
 for i in "${!link_names[@]}"; do
   destination="$skills_dir/${link_names[$i]}"
-  printf 'Linking %s -> %s\n' "$destination" "${target_paths[$i]}"
-  ln -s -- "${target_paths[$i]}" "$destination"
+  printf 'Linking %s -> %s\n' "$destination" "${link_sources[$i]}"
+  ln -s -- "${link_sources[$i]}" "$destination"
 done
