@@ -1,5 +1,6 @@
 skills:
   # - path: sources/custom/skills/just-ci-enforcer
+  - path: sources/custom/skills/remediate-security-scan
   # https://www.aihero.dev/skills-grill-me
   - path: sources/mattpocock-skills/skills/productivity/grill-me
   - path: sources/mattpocock-skills/skills/productivity/handoff
